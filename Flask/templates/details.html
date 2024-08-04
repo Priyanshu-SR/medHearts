@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medHearts-DetailsForm</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/details.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='img/medheart.png')}}" type="image/png">
+</head>
+
+<body>
+    <!-- outer start -->
+    <div id="outer">
+
+        <!-- header start -->
+        <div id="header">
+            <header>
+                <p>Emergency Number - 112</p>
+            </header>
+        </div>
+        <!-- header end -->
+
+        <!-- nav start -->
+        <div id="nav">
+            <div id="nleft">
+                <img height="90%" width="auto" src="{{url_for('static', filename='img/medheart.png')}}"
+                    alt="Heart Medical Icon">
+                <p>medHearts</p>
+            </div>
+            <div id="nright">
+                <a href="index.html">Home</a>
+                <a href="details.html"><button id="check">Check your Blood Pressure</button></a>
+            </div>
+        </div>
+        <!-- nav end -->
+
+        <!-- main start -->
+        <div id="main">
+            <div class="form-container">
+                <fieldset>
+                    <legend>&nbsp; Lifestyle and BP Details &nbsp;</legend>
+                    <h2>Evaluate Your Risk for High Blood Pressure</h2>
+                    <hr>
+                    <form action="/predict" method="post">
+                        <div id="outside">
+                            <div class="inside">
+                                <label for="Gender">Gender:</label>
+                                <select name="Gender" id="Gender" required>
+                                    <option value="">Male or Female?</option>
+                                    <option value=0>Female</option>
+                                    <option value=1>Male</option>
+                                </select>
+
+                                <label for="Age">Age:</label>
+                                <select name="Age" id="Age" required>
+                                    <option value="">Choose age group</option>
+                                    <option value=0>18 - 34</option>
+                                    <option value=1>35 - 50</option>
+                                    <option value=2>51 - 64</option>
+                                    <option value=3>65+</option>
+                                </select>
+
+                                <label for="Patient">BP Patient:</label>
+                                <select name="Patient" id="Patient" required>
+                                    <option value="">Are you an old Patient?</option>
+                                    <option value=0>No</option>
+                                    <option value=1>Yes</option>
+                                </select>
+
+                                <label for="Severity">Severity:</label>
+                                <select name="Severity" id="Severity" required>
+                                    <option value="">Severity of BP attacks?</option>
+                                    <option value=0>Mild</option>
+                                    <option value=1>Moderate</option>
+                                    <option value=2>Severe</option>
+                                </select>
+                            </div>
+                            <div class="inside">
+                                <label for="BreathShortness">Breath Shortness:</label>
+                                <select name="BreathShortness" id="BreathShortness" required>
+                                    <option value="">Is there any feeling of Breath shortness?</option>
+                                    <option value=0>No</option>
+                                    <option value=1>Yes</option>
+                                </select>
+
+                                <label for="VisualChanges">Visual Changes:</label>
+                                <select name="VisualChanges" id="VisualChanges" required>
+                                    <option value="">Any visual changes in body?</option>
+                                    <option value=0>No</option>
+                                    <option value=1>Yes</option>
+                                </select>
+
+                                <label for="NoseBleeding">Nose Bleeding:</label>
+                                <select name="NoseBleeding" id="NoseBleeding" required>
+                                    <option value="">Is there a frequent nose bleeding?</option>
+                                    <option value=0>No</option>
+                                    <option value=1>Yes</option>
+                                </select>
+
+                                <label for="Whendiagnosed">Diagnoses:</label>
+                                <select name="Whendiagnosed" id="Whendiagnosed" required>
+                                    <option value="">Time passed since Diagnosed?</option>
+                                    <option value=1>Less than 1 year</option>
+                                    <option value=0>1 to 5 years</option>
+                                    <option value=2>More than 5 years</option>
+                                </select>
+                            </div>
+                            <div class="inside">
+                                <label for="Systolic">Systolic Range:</label>
+                                <select name="Systolic" id="Systolic" required>
+                                    <option value="">Upper Blood Pressure</option>
+                                    <option value=0>100+</option>
+                                    <option value=1>111 - 120</option>
+                                    <option value=2>121 - 130</option>
+                                    <option value=3>130+</option>
+                                </select>
+
+                                <label for="Diastolic">Diastolic Range:</label>
+                                <select name="Diastolic" id="Diastolic" required>
+                                    <option value="">Lower Blood Pressure</option>
+                                    <option value=0>100+</option>
+                                    <option value=1>130+</option>
+                                    <option value=2>70 - 80</option>
+                                    <option value=3>81 - 90</option>
+                                    <option value=4>91 - 100</option>
+                                </select>
+
+                                <label for="ControlledDiet">Diet Control:</label>
+                                <select name="ControlledDiet" id="ControlledDiet" required>
+                                    <option value="">Do you follow Diet?</option>
+                                    <option value=0>No</option>
+                                    <option value=1>Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+        <!-- main end -->
+
+        <!-- footer start -->
+        <div id="footer">
+            <div id="fleft">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or need assistance, please feel free to reach out to us:</p>
+                <ul>
+                    <li><strong>Email:</strong> support@predictivepulse.com</li>
+                    <li><strong>Phone:</strong> 0456-33322111/33322211</li>
+                    <li><strong>Address:</strong> 123 Health St., Wellness City, HC 12345</li>
+                </ul>
+                <p>Our team is here to help you manage your blood pressure and maintain a healthy lifestyle. We look
+                    forward to hearing from you!</p>
+                <p>&copy; 2024 Blood Pressure Predict. All rights reserved.</p>
+            </div>
+            <div id="fright">
+                <h2>About Us</h2>
+                <p>medHearts is dedicated to providing reliable information and tools to help you manage
+                    your blood pressure. Our platform offers valuable insights and practical advice to support your
+                    health and well-being.</p>
+                <p>Our mission is to enhance your understanding of blood pressure and guide you in making informed
+                    decisions about your health. We strive to offer accessible resources and support to improve your
+                    quality of life.</p>
+            </div>
+        </div>
+        <!-- footer end -->
+
+    </div>
+    <!-- outer end -->
+</body>
+
+</html>

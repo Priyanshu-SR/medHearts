@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medHearts-prediction</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/result.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='img/medheart.png')}}" type="image/png">
+</head>
+
+<body>
+    <!-- outer start -->
+    <div id="outer">
+
+        <!-- header start -->
+        <div id="header">
+            <header>
+                <p>Emergency Number - 112</p>
+            </header>
+        </div>
+        <!-- header end -->
+
+        <!-- nav start -->
+        <div id="nav">
+            <div id="nleft">
+                <img height="90%" width="auto" src="{{url_for('static', filename='img/medheart.png')}}"
+                    alt="Heart Medical Icon">
+                <p>medHearts</p>
+            </div>
+            <div id="nright">
+                <a href="index.html">Home</a>
+                <a href="details.html"><button id="check">Check your Blood Pressure</button></a>
+            </div>
+        </div>
+        <!-- nav end -->
+
+        <!-- main start -->
+        <div id="main" class="result-container">
+            <div class="result-content">
+                <h2>Your Blood Pressure Stage</h2>
+                <p>{{ result }}</p>
+
+                {% if result == "NORMAL" %}
+                <h3>Congratulations! Your Blood Pressure is Normal.</h3>
+                <p>Maintain a healthy lifestyle to keep it that way:</p>
+                <h4>Dietary Tips</h4>
+                <ul>
+                    <li>Eat a balanced diet rich in fruits, vegetables, whole grains, and lean proteins.</li>
+                    <li>Limit salt intake to less than 2,300 milligrams per day.</li>
+                    <li>Include foods high in potassium, such as bananas, oranges, and spinach.</li>
+                    <li>Avoid high-sodium foods and processed meals.</li>
+                    <li>Drink plenty of water and limit sugary drinks.</li>
+                </ul>
+                <h4>Exercise Routine</h4>
+                <ul>
+                    <li>Engage in at least 150 minutes of moderate-intensity aerobic activity per week.</li>
+                    <li>Include strength training exercises at least twice a week.</li>
+                    <li>Take short walks during breaks to stay active throughout the day.</li>
+                    <li>Try activities like yoga or pilates for flexibility and stress relief.</li>
+                </ul>
+                <h4>General Tips</h4>
+                <ul>
+                    <li>Maintain a healthy weight through balanced eating and regular exercise.</li>
+                    <li>Avoid smoking and limit alcohol consumption.</li>
+                    <li>Manage stress through relaxation techniques like deep breathing, meditation, or hobbies.</li>
+                    <li>Get regular health check-ups to monitor your blood pressure.</li>
+                </ul>
+
+                {% elif result == "HYPERTENSION (Stage-1)" %}
+                <h3>Stage 1 Hypertension Detected.</h3>
+                <p>It's important to monitor your blood pressure and make lifestyle changes:</p>
+                <h4>Dietary Tips</h4>
+                <ul>
+                    <li>Follow a heart-healthy diet, such as the DASH diet.</li>
+                    <li>Reduce salt intake to less than 1,500 milligrams per day.</li>
+                    <li>Eat plenty of fruits, vegetables, whole grains, and low-fat dairy products.</li>
+                    <li>Limit intake of red meat, sweets, and sugary beverages.</li>
+                    <li>Include sources of healthy fats, such as nuts, seeds, and olive oil.</li>
+                </ul>
+                <h4>Exercise Routine</h4>
+                <ul>
+                    <li>Engage in at least 150 minutes of moderate-intensity aerobic exercise per week.</li>
+                    <li>Incorporate strength training exercises at least twice a week.</li>
+                    <li>Include activities like brisk walking, jogging, cycling, or swimming.</li>
+                    <li>Practice relaxation exercises like yoga or tai chi to manage stress.</li>
+                </ul>
+                <h4>General Tips</h4>
+                <ul>
+                    <li>Lose weight if you are overweight or obese.</li>
+                    <li>Quit smoking and limit alcohol intake to moderate levels.</li>
+                    <li>Monitor your blood pressure regularly and keep a record.</li>
+                    <li>Consult with a healthcare provider for personalized advice and monitoring.</li>
+                </ul>
+
+                {% elif result == "HYPERTENSION (Stage-2)" %}
+                <h3>Stage 2 Hypertension Detected.</h3>
+                <p>Consult with a healthcare provider for proper management and treatment:</p>
+                <h4>Dietary Tips</h4>
+                <ul>
+                    <li>Adopt a strict low-sodium diet and avoid high-salt foods.</li>
+                    <li>Consume a diet rich in fruits, vegetables, whole grains, and lean proteins.</li>
+                    <li>Avoid processed foods, canned soups, and fast foods that are high in sodium.</li>
+                    <li>Include potassium-rich foods like bananas, potatoes, and spinach.</li>
+                    <li>Limit caffeine and alcohol intake.</li>
+                </ul>
+                <h4>Exercise Routine</h4>
+                <ul>
+                    <li>Engage in at least 150 minutes of moderate-intensity aerobic exercise per week.</li>
+                    <li>Incorporate strength training exercises at least twice a week.</li>
+                    <li>Activities like walking, swimming, and cycling are beneficial.</li>
+                    <li>Practice relaxation exercises like yoga or tai chi to manage stress.</li>
+                </ul>
+                <h4>General Tips</h4>
+                <ul>
+                    <li>Monitor your blood pressure at home and keep a record.</li>
+                    <li>Take prescribed medications as directed by your healthcare provider.</li>
+                    <li>Avoid tobacco products and limit alcohol consumption.</li>
+                    <li>Manage stress through healthy activities like yoga, meditation, or hobbies.</li>
+                </ul>
+
+                {% elif result == "HYPERTENSIVE CRISIS" %}
+                <h3>Hypertensive Crisis Detected. Seek Immediate Medical Attention!</h3>
+                <p>While waiting for medical assistance:</p>
+                <h4>Immediate Actions</h4>
+                <ul>
+                    <li>Stay calm and try to relax.</li>
+                    <li>Avoid any stressful activities or situations.</li>
+                    <li>Do not consume any food or drink that could raise blood pressure further.</li>
+                    <li>Follow any instructions given by your healthcare provider if you have a history of hypertensive crisis.</li>
+                    <li>Make sure you have someone with you to assist and monitor your condition until help arrives.
+                    </li>
+                </ul>
+                <h4>Preventive Measures</h4>
+                <ul>
+                    <li>Work with your healthcare provider to manage your blood pressure effectively.</li>
+                    <li>Take prescribed medications consistently and as directed.</li>
+                    <li>Follow a strict low-sodium diet and avoid high-salt foods.</li>
+                    <li>Maintain a healthy weight through diet and regular exercise.</li>
+                    <li>Avoid smoking and limit alcohol intake.</li>
+                    <li>Practice stress management techniques like deep breathing, meditation, or yoga.</li>
+                </ul>
+                {% endif %}
+            </div>
+            <div class="result-image">
+                <img src="{{ url_for('static', filename='img/' + image_file) }}" alt="Heart Condition Image">
+            </div>
+        </div>
+        <!-- main end -->
+
+        <!-- footer start -->
+        <div id="footer">
+            <div id="fleft">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or need assistance, please feel free to reach out to us:</p>
+                <ul>
+                    <li><strong>Email:</strong> support@predictivepulse.com</li>
+                    <li><strong>Phone:</strong> 0456-33322111/33322211</li>
+                    <li><strong>Address:</strong> 123 Health St., Wellness City, HC 12345</li>
+                </ul>
+                <p>Our team is here to help you manage your blood pressure and maintain a healthy lifestyle. We look
+                    forward to hearing from you!</p>
+                <p>&copy; 2024 Blood Pressure Predict. All rights reserved.</p>
+            </div>
+            <div id="fright">
+                <h2>About Us</h2>
+                <p>medHearts is dedicated to providing reliable information and tools to help you manage
+                    your blood pressure. Our platform offers valuable insights and practical advice to support your
+                    health and well-being.</p>
+                <p>Our mission is to enhance your understanding of blood pressure and guide you in making informed
+                    decisions about your health. We strive to offer accessible resources and support to improve your
+                    quality of life.</p>
+            </div>
+        </div>
+        <!-- footer end -->
+
+    </div>
+    <!-- outer end -->
+</body>
+
+</html>

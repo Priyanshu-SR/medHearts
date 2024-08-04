@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medHearts-Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="icon" href="{{url_for('static', filename='img/medheart.png')}}" type="image/png">
+</head>
+
+<body>
+    <!-- outer start -->
+    <div id="outer">
+
+        <!-- header start -->
+        <div id="header">
+            <header>
+                <p>Emergency Number - 112</p>
+            </header>
+        </div>
+        <!-- header end -->
+
+        <!-- nav start -->
+        <div id="nav">
+            <div id="nleft">
+                <img height="90%" width="auto" src="{{ url_for('static', filename='img/medheart.png') }}"
+                    alt="Heart Medical Icon">
+                <p>medHearts</p>
+            </div>
+            <div id="nright">
+                <a href="index.html">Home</a>
+                <a href="details.html"><button id="check">Check your Blood Pressure</button></a>
+            </div>
+        </div>
+        <!-- nav end -->
+
+        <!-- main start -->
+        <div id="main">
+            <div id="mleft">
+                <img src="{{ url_for('static', filename='img/doctor.png') }}" alt="Doctor image">
+                <h2>&nbsp;Blood Pressure</h2>
+                <h3>What is Blood Pressure?</h3>
+                <p>Blood Pressure (BP) is the force exerted by circulating blood against the walls of the body's
+                    arteries. It's measured in millimeters of mercury (mmHg) and recorded with two numbers:</p>
+                <ul>
+                    <li><strong>Systolic Pressure:</strong> The pressure when the heart beats while pumping blood.</li>
+                    <li><strong>Diastolic Pressure:</strong> The pressure when the heart is at rest between beats.</li>
+                </ul>
+
+                <h3>Normal Blood Pressure Range</h3>
+                <ul>
+                    <li><strong>Normal BP:</strong> Systolic &lt; 120 mmHg and Diastolic &lt; 80 mmHg.</li>
+                    <li><strong>Elevated BP:</strong> Systolic 120-129 mmHg and Diastolic &lt; 80 mmHg.</li>
+                    <li><strong>Hypertension Stage 1:</strong> Systolic 130-139 mmHg or Diastolic 80-89 mmHg.</li>
+                    <li><strong>Hypertension Stage 2:</strong> Systolic ≥ 140 mmHg or Diastolic ≥ 90 mmHg.</li>
+                </ul>
+
+                <h3>Causes of High Blood Pressure</h3>
+                <ul>
+                    <li><strong>Primary (Essential) Hypertension:</strong> No identifiable cause, develops over many
+                        years.</li>
+                    <li><strong>Secondary Hypertension:</strong> Caused by an underlying condition, such as kidney
+                        disease, adrenal gland tumors, thyroid problems, or certain medications.</li>
+                </ul>
+
+                <h3>Symptoms of High Blood Pressure</h3>
+                <p>Often called the "silent killer" because it may not cause symptoms. When symptoms do occur, they can
+                    include:</p>
+                <ul>
+                    <li>Headaches</li>
+                    <li>Shortness of breath</li>
+                    <li>Nosebleeds</li>
+                </ul>
+                <h3>Complications</h3>
+                <ul>
+                    <li><strong>Heart Attack or Stroke:</strong> High BP can cause hardening and thickening of the
+                        arteries.</li>
+                    <li><strong>Aneurysm:</strong> Increased BP can cause blood vessels to weaken and bulge.</li>
+                    <li><strong>Heart Failure:</strong> The heart has to work harder to pump blood.</li>
+                    <li><strong>Kidney Damage:</strong> Can lead to kidney failure.</li>
+                </ul>
+                </ul>
+            </div>
+            <div id="mright">
+                <h1>Welcome to medHearts</h1>
+                <p>
+                    Welcome to our Blood Pressure Prediction tool, designed to help you understand and manage your blood
+                    pressure effectively. Regular monitoring is key to preventing and controlling high blood pressure, a
+                    condition that can lead to serious health issues if left unmanaged.
+                </p>
+                <h3>How It Works</h3>
+                <p>
+                    Our tool provides a comprehensive assessment based on the information you provide. Simply enter your
+                    personal details and recent blood pressure readings, if available. You’ll receive an insightful
+                    analysis and practical advice to help you manage your health better.
+                </p>
+                <ol>
+                    <li>Enter your personal information including age, gender, and weight.</li>
+                    <li>Input your latest blood pressure readings if you have them.</li>
+                    <li>Answer questions about your lifestyle such as diet, exercise habits, and smoking status.</li>
+                    <li>Click "Predict" to receive your results and recommendations.</li>
+                </ol>
+
+                <h3>How the Model Works</h3>
+                <p>
+                    Our prediction model uses the information you provide to estimate your blood pressure status and
+                    stage. It incorporates various factors, including your age, weight, and lifestyle choices, to
+                    generate an accurate prediction. Here’s how it works:
+                </p>
+                <ul>
+                    <li><strong>Data Collection:</strong> We collect data on personal factors like age, weight, and
+                        recent blood pressure readings, along with lifestyle information such as diet and physical
+                        activity.</li>
+                    <li><strong>Assessment:</strong> The model evaluates the data against known benchmarks and criteria
+                        to estimate your blood pressure stage.</li>
+                    <li><strong>Analysis:</strong> It analyzes the input data to provide a detailed report on your blood
+                        pressure status, highlighting any areas of concern.</li>
+                    <li><strong>Prediction:</strong> Based on the results, the tool offers prediction of your current
+                        Hypertension stage.</li>
+                </ul>
+                <img src="{{ url_for('static', filename='img/hypertensionStages.webp') }}" alt="Blood Pressure Chart">
+                <h3>Why Monitoring Blood Pressure is Essential</h3>
+                <p>
+                    Regular blood pressure monitoring helps in:
+                </p>
+                <ul>
+                    <li><strong>Early Detection:</strong> Identifying potential issues before they escalate.</li>
+                    <li><strong>Effective Management:</strong> Adjusting lifestyle and treatment plans as needed.</li>
+                    <li><strong>Health Monitoring:</strong> Tracking changes over time for better health outcomes.</li>
+                </ul>
+
+                <h3>Features of Our Prediction Tool</h3>
+                <ul>
+                    <li><strong>User-Friendly Interface:</strong> Designed for ease of use without any technical
+                        knowledge required.</li>
+                    <li><strong>Detailed Reports:</strong> Clear and comprehensive reports on your blood pressure
+                        status.</li>
+                    <li><strong>Actionable Insights:</strong> Practical recommendations based on your results.</li>
+                </ul>
+
+                <h3>Tips for Maintaining Healthy Blood Pressure</h3>
+                <ul>
+                    <li>Maintain a healthy weight and stay active.</li>
+                    <li>Adopt a balanced diet rich in fruits, vegetables, and low in sodium.</li>
+                    <li>Limit alcohol consumption and avoid smoking.</li>
+                    <li>Regularly check your blood pressure and follow your healthcare provider’s advice.</li>
+                </ul>
+
+                <h3>If your blood pressure is in Hypertensive Crisis Stage</h3>
+                <p>Immediately call the Emergency number at the top of the page or contact us for Immediate assistance.
+                </p>
+            </div>
+        </div>
+        <!-- main end -->
+
+        <!-- footer start -->
+        <div id="footer">
+            <div id="fleft">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or need assistance, please feel free to reach out to us:</p>
+                <ul>
+                    <li><strong>Email:</strong> support@predictivepulse.com</li>
+                    <li><strong>Phone:</strong> 0456-33322111/33322211</li>
+                    <li><strong>Address:</strong> 123 Health St., Wellness City, HC 12345</li>
+                </ul>
+                <p>Our team is here to help you manage your blood pressure and maintain a healthy lifestyle. We look
+                    forward to hearing from you!</p>
+                <p>&copy; 2024 Blood Pressure Predict. All rights reserved.</p>
+            </div>
+            <div id="fright">
+                <h2>About Us</h2>
+                <p>medHearts is dedicated to providing reliable information and tools to help you manage
+                    your blood pressure. Our platform offers valuable insights and practical advice to support your
+                    health and well-being.</p>
+                <p>Our mission is to enhance your understanding of blood pressure and guide you in making informed
+                    decisions about your health. We strive to offer accessible resources and support to improve your
+                    quality of life.</p>
+            </div>
+        </div>
+        <!-- footer end -->
+
+    </div>
+    <!-- outer end -->
+</body>
+
+</html>
