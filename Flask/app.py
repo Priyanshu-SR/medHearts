@@ -75,5 +75,5 @@ def predict():
     return render_template('result.html', result=result, image_file=image_file)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
