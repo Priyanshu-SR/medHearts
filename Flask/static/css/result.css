@@ -74,23 +74,24 @@ body {
     color: #333333;
 }
 
-#check {
+#check{
     padding: 15px 30px;
     border-radius: 25px;
-    border: 2px solid #00796b;
+    border: 5px double #018d7d;
     font-size: 18px;
     font-weight: 700;
     color: #ffffff;
-    background-color: #004d40;
+    background-color: #333333;
     cursor: pointer;
     text-align: center;
     display: inline-block;
     margin-left: 20px;
     transition: 1s ease;
+    box-shadow: 5px 5px 5px 5px #333333;
 }
 
 #check:hover {
-    background-color: #333333;
+    background-color: #026151;
 }
 
 #main {
@@ -259,6 +260,7 @@ body {
     }
 
     .result-container{
+        padding: 2px;
         display: flex;
         flex-direction: column;
     }
@@ -269,10 +271,12 @@ body {
     #nav {
         font-size: 14px;
         display: flex;
+        flex: 2;
         flex-direction: column;
-        flex: 1;
     }
-
+    #nright{
+        padding-bottom: 20px;
+    }
     #check {
         font-size: 14px;
     }
