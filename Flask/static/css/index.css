@@ -77,20 +77,21 @@ body {
 #check {
     padding: 15px 30px;
     border-radius: 25px;
-    border: 2px solid #00796b;
+    border: 5px double #018d7d;
     font-size: 18px;
     font-weight: 700;
     color: #ffffff;
-    background-color: #004d40;
+    background-color: #333333;
     cursor: pointer;
     text-align: center;
     display: inline-block;
     margin-left: 20px;
     transition: 1s ease;
+    box-shadow: 5px 5px 5px 5px #333333;
 }
 
 #check:hover {
-    background-color: #333333;
+    background-color: #026151;
 }
 
 #main {
@@ -118,7 +119,7 @@ body {
     margin-right: 30px;
 }
 
-#main #mleft img{
+#main #mleft img {
     border-bottom: 5px double #333333;
     float: left;
     width: 15%;
@@ -215,58 +216,65 @@ body {
 }
 
 @media (max-width: 1000px) {
-    #mleft{
+    #mleft {
         padding-left: 2px;
         line-height: normal;
     }
-    #mleft img{
+
+    #mleft img {
         display: none;
     }
-    #mleft h2{
+
+    #mleft h2 {
         font-size: 24px;
     }
-    #mleft h3{
+
+    #mleft h3 {
         font-size: 18px;
     }
-    #mleft p{
+
+    #mleft p {
         font-size: 14px;
     }
-    #meft li{
+
+    #meft li {
         padding: 3px;
         font-size: 12px;
     }
 }
-@media (max-width: 800px){
-    #mleft{
+
+@media (max-width: 800px) {
+    #mleft {
         display: none;
     }
 }
+
 @media (max-width: 600px) {
     #mleft {
-        display: none; /* Hide #mleft on smaller screens */
+        display: none;
     }
 
     #mright {
-        width: 100%;   /* Ensure #mright takes up the full width */
+        width: 100%;
         padding: 10px;
-        box-sizing: border-box; /* Include padding in width */
+        box-sizing: border-box;
     }
 
     #main {
-        flex-direction: column; /* Stack #mleft and #mright vertically */
+        flex-direction: column;
         padding: 20px;
     }
 
     #main #mright img {
-        width: 80%;    /* Reduce the width of images in #mright */
+        width: 80%;
         margin: 0 auto 20px;
         float: none;
-        border: none; /* Remove border from images if needed */
+        border: none;
     }
 
     #nav {
-        flex-direction: column; /* Stack nav items vertically */
-        height: auto; /* Adjust height */
+        flex-direction: column;
+        height: auto;
         padding: 10px 0;
     }
 
@@ -276,25 +284,25 @@ body {
     }
 
     #nright a {
-        margin-bottom: 10px; /* Space between Home link and Check button */
-        font-size: 18px; /* Adjust font size for better readability */
+        margin-bottom: 10px;
+        font-size: 18px;
     }
 
     #check {
-        margin-top: 10px; /* Add space above Check button */
-        display: block; /* Center the button */
+        margin-top: 10px;
+        display: block;
         margin-left: auto;
         margin-right: 10px;
     }
 
     #main #mright h1 {
-        font-size: 40px; /* Increase the size of the heading */
-        text-align: left; /* Align text to the left */
+        font-size: 40px;
+        text-align: left;
     }
 
     #footer {
         flex-direction: column;
-        align-items: flex-start; /* Align footer items to the left */
+        align-items: flex-start;
         padding: 20px;
     }
 
@@ -302,7 +310,7 @@ body {
     #fright {
         width: 100%;
         margin-bottom: 20px;
-        text-align: left; /* Align text to the left */
+        text-align: left;
     }
 }
 
@@ -317,32 +325,39 @@ body {
     }
 
     #nright a {
-        margin-bottom: 5px; /* Reduce space between buttons */
-        font-size: 16px; /* Adjust font size for very small screens */
+        margin-bottom: 5px;
+        font-size: 16px;
     }
 
     #check {
-        margin-top: 5px; /* Add less space above Check button */
-        display: block; /* Center the button */
+        margin-top: 5px;
+        display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
     #main {
+        padding: 1px;
+        width: 100%;
+    }
+
+    #main #mright {
         padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     #main #mright img {
-        width: 90%; /* Further reduce image width for very small screens */
+        width: 100%;
     }
 
     #main #mright h1 {
-        font-size: 37px; /* Increase the size of the heading */
+        font-size: 37px;
     }
 
     #footer {
         flex-direction: column;
-        align-items: flex-start; /* Align footer items to the left */
+        align-items: flex-start;
         padding: 20px;
     }
 
@@ -350,7 +365,6 @@ body {
     #fright {
         width: 100%;
         margin-bottom: 20px;
-        text-align: left; /* Align text to the left */
+        text-align: left;
     }
 }
-                              
