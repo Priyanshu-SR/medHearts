@@ -10,6 +10,6 @@ It is trained on the RandomForestClassifier after being checked on the mmultiple
 | GaussianNB | 0.913765 |
 | MultinomialNB | 0.797678 |
 | KNeighborsClassifier | 0.993367 |
-| Support Vector Machine | 0.978441Content Cell |
+| Support Vector Machine | 0.978441 |
 
 Patients have to fill their medical details and some other details.
