@@ -1,6 +1,6 @@
 # medhearts
 This is machine learning web app which predicts the hypertension level in the patients.
-It is trained on the RandomForestClassifier after being checked on the mmultiple models.
+It is trained on the RandomForestClassifier after being checked on the multiple models.
 
 | Model  | Score |
 | ------------- | ------------- 
