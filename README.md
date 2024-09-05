@@ -13,3 +13,6 @@ It is trained on the RandomForestClassifier after being checked on the multiple 
 | Support Vector Machine | 0.978441 |
 
 Patients have to fill their medical details and some other details.
+
+
+Google Cloud Skill badge - https://www.cloudskillsboost.google/public_profiles/d320bdfb-ca71-4cb0-8654-97ff14d955b4
